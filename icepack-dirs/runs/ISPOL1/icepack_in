@@ -128,7 +128,7 @@
     lateral_flux_type   = 'uniform_ice'
     fyear_init      = 2015
     ycycle          = 1
-    data_dir        = '/home/pjuotila/tiede/icepack-dirs/input/Icepack_data/forcing'
+    data_dir        = '../../input/Icepack_data/forcing'
     atm_data_file   = 'ISPOL_atm_forcing_shifted.txt'
     ocn_data_file   = 'pop_frc.gx1v3.051202_but_hblt_from_010815_ispol_shifted.txt'
     bgc_data_file   = 'nutrients_daily_ISPOL_WOA_field3.txt'

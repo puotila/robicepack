@@ -100,6 +100,16 @@ program main
        
       ! reading ends
       ! do something for data
+      ! change the initial ice thickness (or rather volume) to the recommended value 
+      ! which matches with category 2
+      vicen(:,:) = 0.0
+      vicen(:,2) = 0.7
+      ! change aice of category 2 to one, so that grid cells are entirely ice covered at start
+      aicen(:,:) = 0.0
+      aicen(:,2) = 1.0
+      ! change snow thickness of category 2 to the recommende value
+      vsnon(:,:) = 0.0
+      vsnon(:,2) = 0.1
 
       ! writing starts
       open(nu_dump,file=fileout,form='unformatted')
