@@ -6,8 +6,8 @@
     dt             = 3600.0
     npt            = 8760
     ndtd           = 1
-    ice_ic         = 'default'
-    restart        = .false.
+    ice_ic         = './restart/iceadj.2005-01-01-00000'
+    restart        = .true.
     restart_dir    = './restart/'
     restart_format = 'bin'
     dumpfreq       = 'y'
@@ -55,10 +55,10 @@
 &shortwave_nml
     shortwave       = 'ccsm3'
     albedo_type     = 'ccsm3'
-    albicev         = 0.78
-    albicei         = 0.36
-    albsnowv        = 0.98
-    albsnowi        = 0.70 
+    albicev         = 0.67
+    albicei         = 0.31
+    albsnowv        = 0.96
+    albsnowi        = 0.72 
     ahmax           = 0.3
     R_ice           = 0.
     R_pnd           = 0.
