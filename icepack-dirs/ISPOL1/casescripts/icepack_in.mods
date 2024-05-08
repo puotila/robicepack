@@ -1,0 +1,4 @@
+# icepack.setup settings
+
+nprocs = 1
+data_dir = '/home/pjuotila/tiede/icepack-dirs/input/Icepack_data/forcing'

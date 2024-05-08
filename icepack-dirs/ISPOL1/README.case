@@ -1,0 +1,6 @@
+ke 13.12.2023 02.13.44 +0200./icepack.setup -c /home/pjuotila/tiede/icepack-dirs/ISPOL1 -m cubbli --env gnu
+ke 13.12.2023 02.13.44 +0200./icepack.setup adding namelist modes set_env.col
+ke 13.12.2023 02.13.44 +0200./icepack.setup /home/pjuotila/tiede/Icepack/configuration/scripts/options/set_[nml,env].UnDeFiNeD not found
+ke 13.12.2023 02.14.25 +0200 ./icepack.build:ISPOL1 build completed icepack.bldlog.231213-021411
+ke 13.12.2023 02.15.43 +0200 ./icepack.run: ISPOL1 run completed icepack.runlog.231213-021541
+ke 13.12.2023 02.15.43 +0200 ./icepack.submit: ISPOL1 job submitted

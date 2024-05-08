@@ -1,0 +1,30 @@
+# icepack.setup settings
+
+setenv ICE_SANDBOX  /home/pjuotila/tiede/Icepack
+setenv ICE_SCRIPTS  /home/pjuotila/tiede/Icepack/configuration/scripts
+setenv ICE_CASENAME ISPOL1
+setenv ICE_CASEDIR  /home/pjuotila/tiede/icepack-dirs/ISPOL1
+setenv ICE_MACHINE  cubbli
+setenv ICE_ENVNAME  gnu
+setenv ICE_MACHCOMP cubbli_gnu
+setenv ICE_RUNDIR   /home/pjuotila/tiede/icepack-dirs/runs/ISPOL1
+setenv ICE_GRID     col
+setenv ICE_NXGLOB   4
+setenv ICE_NTASKS   1
+setenv ICE_NTHRDS   1
+setenv ICE_BASELINE /home/pjuotila/tiede/icepack-dirs/baseline
+setenv ICE_BASEGEN  UnDeFiNeD
+setenv ICE_BASECOM  UnDeFiNeD
+setenv ICE_SPVAL    UnDeFiNeD
+setenv ICE_QUIETMODE  false
+setenv ICE_TEST     UnDeFiNeD
+setenv ICE_TESTNAME UnDeFiNeD
+setenv ICE_BFBCOMP  UnDeFiNeD
+setenv ICE_ACCOUNT  P0000000
+setenv ICE_QUEUE    debug
+setenv ICE_COVERAGE false
+
+# set_env.col
+
+setenv ICE_GRID       col
+

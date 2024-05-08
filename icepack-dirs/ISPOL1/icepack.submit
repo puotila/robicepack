@@ -1,0 +1,5 @@
+#!/bin/csh -f 
+
+  ./icepack.run
+echo "`date` ${0}: ISPOL1 job submitted"  >> /home/pjuotila/tiede/icepack-dirs/ISPOL1/README.case
+

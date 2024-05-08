@@ -1,0 +1,621 @@
+ (input_data) Reading setup_nml
+ (input_data) Reading grid_nml
+ (input_data) Reading thermo_nml
+ (input_data) Reading tracer_nml
+ (input_data) Reading shortwave_nml
+ (input_data) Reading ponds_nml
+ (input_data) Reading snow_nml
+ (input_data) Reading forcing_nml
+ Diagnostic output will be in files 
+     icepack.runlog.timestamp
+     ice_diag.icefree
+     ice_diag.slab
+     ice_diag.full_ITD
+     ice_diag.land
+ -----------------------------------
+   ICEPACK model diagnostic output  
+ -----------------------------------
+  
+  Document ice_in namelist parameters:
+  ==================================== 
+  
+  days_per_year             =      365
+  use_leap_years            =        F
+  year_init                 =     2004
+  istep0                    =        0
+  dt                        =     3600.00
+  npt                       =     8760
+  diagfreq                  =       24
+  dumpfreq                  = y
+  dump_last                 =        F
+  restart                   =        T
+  restart_dir               = ./restart/
+  restart_file              = iced
+  restart_format            = bin
+  history_format            = none
+  ice_ic                    = ./restart/iced.2005-01-01-00000
+  conserv_check             =        F
+  kitd                      =        1
+  kcatbound                 =        1
+  ndtd                      =        1
+  kstrength                 =        1
+  krdg_partic               =        1
+  krdg_redist               =        1
+  mu_rdg                    =        3.00
+  Cf                        =       17.00
+  ksno                      =        0.30
+  shortwave                 = dEdd
+  BGC coupling is switched OFF
+  R_ice                     =        0.00
+  R_pnd                     =        0.00
+  R_snw                     =        1.50
+  dT_mlt                    =        1.50
+  rsnw_mlt                  =     1500.00
+  kalg                      =        0.60
+  hp1                       =        0.01
+  hs0                       =        0.00
+  sw_redist                 =        F
+  sw_frac                   =     0.900000
+  sw_dtemp                  =     0.020000
+  rfracmin                  =        0.15
+  rfracmax                  =        1.00
+  hs1                       =        0.03
+  dpscale                   =        0.00
+  frzpnd                    = hlid
+  ktherm                    =        2
+  emissivity                =     0.985000
+  a_rapid_mode              =     0.000500
+  Rac_rapid_mode            =    10.000000
+  aspect_rapid_mode         =     1.000000
+  dSdt_slow_mode            =    -0.000000
+  phi_c_slow_mode           =     0.050000
+  phi_i_mushy               =     0.850000
+  Tliquidus_max             =    -0.100000
+  atmbndy                   = similarity
+  formdrag                  =        F
+  highfreq                  =        F
+  natmiter                  =        5
+  atmiter_conv              =     0.000000
+  calc_strair               =        T
+  calc_Tsfc                 =        T
+  calc_dragio               =        F
+  floediam                  =   300.000000
+  hfrazilmin                =     0.050000
+  atm_data_type             = ISPOL
+  ocn_data_type             = ISPOL
+  bgc_data_type             = ISPOL
+   lateral_flux_type        = uniform_ice
+  atm_data_file             = ISPOL_atm_forcing.txt
+  ocn_data_file             = pop_frc.gx1v3.051202_but_hblt_from_010815_ispol.txt
+  bgc_data_file             = nutrients_daily_ISPOL_WOA_field3.txt
+  ice_data_file             = open_clos_lindsay.dat
+  cpl_frazil                = fresh_ice_correction
+  update_ocn_f              =        F
+  wave_spec                 =        F
+  l_mpond_fresh             =        F
+  ustar_min                 =     0.000500
+  hi_min                    =     0.010000
+  fbot_xfer_type            = constant
+  oceanmixed_ice            =        T
+  tfrz_option               = mushy
+  saltflux_option           = constant
+  ice_ref_salinity          =     4.000000
+  restore_ocn               =        F
+  tr_iage                   =        F
+  tr_FY                     =        F
+  tr_lvl                    =        T
+  tr_pond_lvl               =        T
+  tr_pond_topo              =        F
+  tr_snow                   =        F
+  tr_aero                   =        F
+  tr_fsd                    =        F
+  
+                  max_ntrcr =       29
+                      ntrcr =       21
+  
+                    nt_sice =       10
+                    nt_qice =        2
+                    nt_qsno =        9
+  
+                    ncat    =        5
+                    nilyr   =        7
+                    nslyr   =        1
+                    nblyr   =        1
+                    nfsd    =        1
+                    n_iso   =        0
+                    n_aero  =        1
+  
+                    nx      =        4
+  
+ (init_zbgc) Reading zbgc_nml
+  tr_brine                  =        F
+ (icepack_write_tracer_flags):
+   tr_iage =  F
+   tr_FY   =  F
+   tr_lvl  =  T
+   tr_pond =  T
+   tr_pond_lvl  =  T
+   tr_pond_topo =  F
+   tr_snow    =  F
+   tr_fsd     =  F
+   tr_iso     =  F
+   tr_aero    =  F
+   tr_brine   =  F
+   tr_zaero   =  F
+   tr_bgc_Nit =  F
+   tr_bgc_N   =  F
+   tr_bgc_DON =  F
+   tr_bgc_C   =  F
+   tr_bgc_chl =  F
+   tr_bgc_Am  =  F
+   tr_bgc_Sil =  F
+   tr_bgc_DMS =  F
+   tr_bgc_Fe  =  F
+   tr_bgc_hum =  F
+   tr_bgc_PON =  F
+ (icepack_write_tracer_sizes):
+   fixed parameters: 
+   max_algae_out =           3
+   max_dic_out   =           1
+   max_doc_out   =           3
+   max_don_out   =           1
+   max_fe_out    =           2
+   nmodal1_out   =          10
+   nmodal2_out   =           8
+   max_iso_out   =           3
+   max_aero_out  =           6
+   max_nbtrcr_out=          29
+   model defined parameters: 
+   ncat      =            5
+   nilyr     =            7
+   nslyr     =            1
+   nblyr     =            1
+   nfsd      =            1
+   n_algae   =            0
+   n_DOC     =            0
+   n_DON     =            0
+   n_DIC     =            0
+   n_fed     =            0
+   n_fep     =            0
+   n_zaero   =            0
+   n_aero    =            1
+   n_iso     =            0
+   ntrcr     =           21
+   ntrcr_o   =           21
+   nbtrcr    =            0
+   nbtrcr_sw =            0
+ (icepack_write_tracer_indices):
+   nt_Tsfc =            1
+   nt_qice =            2
+   nt_qsno =            9
+   nt_sice =           10
+   nt_fbri =            0
+   nt_iage =           29
+   nt_FY   =           29
+   nt_alvl =           17
+   nt_vlvl =           18
+   nt_apnd =           19
+   nt_hpnd =           20
+   nt_ipnd =           21
+   nt_fsd  =           29
+   nt_smice      =           29
+   nt_smliq      =           29
+   nt_rhos       =           29
+   nt_rsnw       =           29
+   nt_isosno     =           29
+   nt_isoice     =           29
+   nt_aero       =           25
+   nt_bgc_Nit    =            0
+   nt_bgc_Am     =            0
+   nt_bgc_Sil    =            0
+   nt_bgc_DMSPp  =            0
+   nt_bgc_DMSPd  =            0
+   nt_bgc_DMS    =            0
+   nt_bgc_hum    =            0
+   nt_bgc_PON    =            0
+   nlt_bgc_Nit   =            0
+   nlt_bgc_Am    =            0
+   nlt_bgc_Sil   =            0
+   nlt_bgc_DMSPp =            0
+   nlt_bgc_DMSPd =            0
+   nlt_bgc_DMS   =            0
+   nlt_bgc_hum   =            0
+   nlt_bgc_PON   =            0
+   nlt_chl_sw    =            0
+   nt_zbgc_frac  =            0
+   nt_bgc_S      =            0  (deprecated)
+   max_nbtrcr =           29
+   bio_index_o(k) =            1           0
+   bio_index(k)   =            1           0
+   bio_index_o(k) =            2           0
+   bio_index(k)   =            2           0
+   bio_index_o(k) =            3           0
+   bio_index(k)   =            3           0
+   bio_index_o(k) =            4           0
+   bio_index(k)   =            4           0
+   bio_index_o(k) =            5           0
+   bio_index(k)   =            5           0
+   bio_index_o(k) =            6           0
+   bio_index(k)   =            6           0
+   bio_index_o(k) =            7           0
+   bio_index(k)   =            7           0
+   bio_index_o(k) =            8           0
+   bio_index(k)   =            8           0
+   bio_index_o(k) =            9           0
+   bio_index(k)   =            9           0
+   bio_index_o(k) =           10           0
+   bio_index(k)   =           10           0
+   bio_index_o(k) =           11           0
+   bio_index(k)   =           11           0
+   bio_index_o(k) =           12           0
+   bio_index(k)   =           12           0
+   bio_index_o(k) =           13           0
+   bio_index(k)   =           13           0
+   bio_index_o(k) =           14           0
+   bio_index(k)   =           14           0
+   bio_index_o(k) =           15           0
+   bio_index(k)   =           15           0
+   bio_index_o(k) =           16           0
+   bio_index(k)   =           16           0
+   bio_index_o(k) =           17           0
+   bio_index(k)   =           17           0
+   bio_index_o(k) =           18           0
+   bio_index(k)   =           18           0
+   bio_index_o(k) =           19           0
+   bio_index(k)   =           19           0
+   bio_index_o(k) =           20           0
+   bio_index(k)   =           20           0
+   bio_index_o(k) =           21           0
+   bio_index(k)   =           21           0
+   bio_index_o(k) =           22           0
+   bio_index(k)   =           22           0
+   bio_index_o(k) =           23           0
+   bio_index(k)   =           23           0
+   bio_index_o(k) =           24           0
+   bio_index(k)   =           24           0
+   bio_index_o(k) =           25           0
+   bio_index(k)   =           25           0
+   bio_index_o(k) =           26           0
+   bio_index(k)   =           26           0
+   bio_index_o(k) =           27           0
+   bio_index(k)   =           27           0
+   bio_index_o(k) =           28           0
+   bio_index(k)   =           28           0
+   bio_index_o(k) =           29           0
+   bio_index(k)   =           29           0
+   max_algae =            3
+   nt_bgc_N(k)  =            1           0
+   nlt_bgc_N(k) =            1           0
+   nt_bgc_C(k)  =            1           0
+   nlt_bgc_C(k) =            1           0
+   nt_bgc_chl(k)  =            1           0
+   nlt_bgc_chl(k) =            1           0
+   nt_bgc_N(k)  =            2           0
+   nlt_bgc_N(k) =            2           0
+   nt_bgc_C(k)  =            2           0
+   nlt_bgc_C(k) =            2           0
+   nt_bgc_chl(k)  =            2           0
+   nlt_bgc_chl(k) =            2           0
+   nt_bgc_N(k)  =            3           0
+   nlt_bgc_N(k) =            3           0
+   nt_bgc_C(k)  =            3           0
+   nlt_bgc_C(k) =            3           0
+   nt_bgc_chl(k)  =            3           0
+   nlt_bgc_chl(k) =            3           0
+   max_DOC =            3
+   nt_bgc_DOC(k)  =            1           0
+   nlt_bgc_DOC(k) =            1           0
+   nt_bgc_DOC(k)  =            2           0
+   nlt_bgc_DOC(k) =            2           0
+   nt_bgc_DOC(k)  =            3           0
+   nlt_bgc_DOC(k) =            3           0
+   max_DON =            1
+   nt_bgc_DON(k)  =            1           0
+   nlt_bgc_DON(k) =            1           0
+   max_DIC =            1
+   nt_bgc_DIC(k)  =            1           0
+   nlt_bgc_DIC(k) =            1           0
+   max_fe =            2
+   nt_bgc_Fed(k)  =            1           0
+   nlt_bgc_Fed(k) =            1           0
+   nt_bgc_Fep(k)  =            1           0
+   nlt_bgc_Fep(k) =            1           0
+   nt_bgc_Fed(k)  =            2           0
+   nlt_bgc_Fed(k) =            2           0
+   nt_bgc_Fep(k)  =            2           0
+   nlt_bgc_Fep(k) =            2           0
+   max_aero =            6
+   nt_zaero(k)     =            1           0
+   nlt_zaero(k)    =            1           0
+   nlt_zaero_sw(k) =            1           0
+   nt_zaero(k)     =            2           0
+   nlt_zaero(k)    =            2           0
+   nlt_zaero_sw(k) =            2           0
+   nt_zaero(k)     =            3           0
+   nlt_zaero(k)    =            3           0
+   nlt_zaero_sw(k) =            3           0
+   nt_zaero(k)     =            4           0
+   nlt_zaero(k)    =            4           0
+   nlt_zaero_sw(k) =            4           0
+   nt_zaero(k)     =            5           0
+   nlt_zaero(k)    =            5           0
+   nlt_zaero_sw(k) =            5           0
+   nt_zaero(k)     =            6           0
+   nlt_zaero(k)    =            6           0
+   nlt_zaero_sw(k) =            6           0
+ 
+  (icepack_init_itd_hist)
+  hin_max(n-1) < Cat n < hin_max(n)
+    0.0000000000000000       < Cat            1  <   0.59999999999999998
+   0.59999999999999998       < Cat            2  <    1.3999999999999999
+    1.3999999999999999       < Cat            3  <    2.4000000000000004
+    2.4000000000000004       < Cat            4  <    3.6000000000000001
+    3.6000000000000001       < Cat            5  <    999.89999999999998
+ 
+ Using restart dump=./restart/iced.2005-01-01-00000
+ Restart read at istep=        8760   31536000.000000000        0.0000000000000000     
+ min/max area, vol ice, vol snow, Tsfc
+ (read_restart_field)   0.0000000000000000       0.77369577673024681        2.2610764371182142     
+ (read_restart_field)   0.0000000000000000        1.5798045364099313        4.1589676338494490     
+ (read_restart_field)   0.0000000000000000       0.37412548838651516       0.93224154515420909     
+ (read_restart_field)  -6.8470100404916385       -1.9045826499242646       -79.964027447567972     
+ min/max sice for each layer
+ (read_restart_field)   0.0000000000000000        9.9344491445414409        44.550227983653038     
+ (read_restart_field)   0.0000000000000000        5.1760918797081352        34.481623130390979     
+ (read_restart_field)   0.0000000000000000        3.3207984856127655        34.121462838997004     
+ (read_restart_field)   0.0000000000000000        2.7961969999707410        35.303269219498681     
+ (read_restart_field)   0.0000000000000000        3.0530646302545925        35.885899837386091     
+ (read_restart_field)   0.0000000000000000        3.1618037912021819        35.558626095487391     
+ (read_restart_field)   0.0000000000000000        3.1968784800338250        34.410880595348708     
+ min/max qice for each layer
+ (read_restart_field)  -310150621.08700496        0.0000000000000000       -2329644725.2646818     
+ (read_restart_field)  -305894408.77647555        0.0000000000000000       -2497351576.0885320     
+ (read_restart_field)  -302632391.70142353        0.0000000000000000       -2566992609.9065504     
+ (read_restart_field)  -300110216.96546108        0.0000000000000000       -2595593581.2654157     
+ (read_restart_field)  -297944651.72189164        0.0000000000000000       -2609792727.1932468     
+ (read_restart_field)  -296048985.36969501        0.0000000000000000       -2619671399.9517941     
+ (read_restart_field)  -293480464.29262698        0.0000000000000000       -2629255591.5749860     
+ min/max qsno for each layer
+ (read_restart_field)  -112341133.19434540        0.0000000000000000       -1557244979.1855612     
+ min/max radiation fields
+ (read_restart_field)   77.147527033844199        252.64995002746565        514.32608911430486     
+ (read_restart_field)   70.741986007690386        70.741986007690386        282.96794403076154     
+ (read_restart_field)   60.635988006591752        60.635988006591752        242.54395202636701     
+ (read_restart_field)   78.321484508514345        78.321484508514345        313.28593803405738     
+ (read_restart_field)   42.950491504669159        42.950491504669159        171.80196601867664     
+ min/max sst, frzmlt
+ (read_restart_field) -0.74643693224342189       0.38959785954361159      -0.86980296318380801     
+ (read_restart_field)  -1000.0000000000000        0.0000000000000000       -3000.0000000000000     
+ min/max level ice area, volume
+ (read_restart_field)   0.0000000000000000        1.0000000000000000        13.999999999999988     
+ (read_restart_field)   0.0000000000000000        1.0000000000000000        13.999999999999975     
+ min/max level-ice ponds
+ (read_restart_field)   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ (read_restart_field)   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ (read_restart_field)   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ (read_restart_field)   3.9079653362250602E-006   3.9079653362250602E-006   1.5631861344900241E-005
+ (read_restart_field)   0.0000000000000000       0.45020604223621863       0.45020604223621863     
+ (read_restart_field)   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ 
+ (icepack_write_parameters)
+   rhos       =    330.00000000000000     
+   rhoi       =    917.00000000000000     
+   rhow       =    1026.0000000000000     
+   cp_air     =    1005.0000000000000     
+   emissivity =   0.98499999999999999     
+   floediam   =    300.00000000000000     
+   hfrazilmin =    5.0000000000000003E-002
+   cp_ice     =    2106.0000000000000     
+   cp_ocn     =    4218.0000000000000     
+   depressT   =    5.3999999999999999E-002
+   dragio     =    5.3600000000000002E-003
+   calc_dragio=  F
+   iceruf_ocn =    2.9999999999999999E-002
+   thickness_ocn_layer1 =    2.0000000000000000     
+   albocn     =    5.9999999999999998E-002
+   gravit     =    9.8061600000000002     
+   viscosity_dyn =    1.7899999999999999E-003
+   tscale_pnd_drain =    10.000000000000000     
+   Tocnfrz    =   -1.8000000000000000     
+   rhofresh   =    1000.0000000000000     
+   zvir       =   0.60599999999999998     
+   vonkar     =   0.40000000000000002     
+   cp_wv      =    1810.0000000000000     
+   stefan_boltzmann =    5.6699999999999998E-008
+   Tffresh    =    273.14999999999998     
+   Lsub       =    2835000.0000000000     
+   Lvap       =    2501000.0000000000     
+   Timelt     =    0.0000000000000000     
+   Tsmelt     =    0.0000000000000000     
+   ice_ref_salinity =    4.0000000000000000     
+   iceruf     =    5.0000000000000001E-004
+   Cf         =    17.000000000000000     
+   Pstar      =    27500.000000000000     
+   Cstar      =    20.000000000000000     
+   kappav     =    1.3999999999999999     
+   kice       =    2.0299999999999998     
+   ksno       =   0.29999999999999999     
+   zref       =    10.000000000000000     
+   hs_min     =    1.0000000000000000E-004
+   snowpatch  =    2.0000000000000000E-002
+   rhosi      =    940.00000000000000     
+   sk_l       =    2.9999999999999999E-002
+   saltmax    =    3.2000000000000002     
+   phi_init   =   0.75000000000000000     
+   min_salin  =   0.10000000000000001     
+   salt_loss  =   0.40000000000000002     
+   Tliquidus_max =  -0.10000000000000001     
+   min_bgc    =    1.0000000000000000E-002
+   dSin0_frazil =    3.0000000000000000     
+   hi_ssl     =    5.0000000000000003E-002
+   hs_ssl     =    4.0000000000000001E-002
+   awtvdr     =    3.1800000000000001E-003
+   awtidr     =    1.8200000000000000E-003
+   awtvdf     =   0.63282000000000005     
+   awtidf     =   0.36218000000000000     
+   qqqice     =    11637800.000000000     
+   TTTice     =    5897.8000000000002     
+   qqqocn     =    627572.40000000002     
+   TTTocn     =    5107.3999999999996     
+   argcheck   = first
+   puny       =    9.9999999999999994E-012
+   bignum     =    1.0000000000000000E+030
+   secday     =    86400.000000000000     
+   pi         =    3.1415926535897931     
+   pih        =    1.5707963267948966     
+   piq        =   0.78539816339744828     
+   pi2        =    6.2831853071795862     
+   rad_to_deg =    57.295779513082323     
+   Lfresh     =    334000.00000000000     
+   cprho      =    4327668.0000000000     
+   Cp         =    477.65843590643283     
+   ktherm     =            2
+   conduct    = bubbly
+   fbot_xfer_type = constant
+   calc_Tsfc  =  T
+   cpl_frazil = fresh_ice_correction                                                            
+   update_ocn_f =  F
+   dts_b      =    50.000000000000000     
+   ustar_min  =    5.0000000000000001E-004
+   hi_min     =    1.0000000000000000E-002
+   a_rapid_mode =    5.0000000000000001E-004
+   Rac_rapid_mode =    10.000000000000000     
+   aspect_rapid_mode =    1.0000000000000000     
+   dSdt_slow_mode =   -4.9999999999999998E-008
+   phi_c_slow_mode =    5.0000000000000003E-002
+   phi_i_mushy=   0.84999999999999998     
+   shortwave  = dEdd
+   albedo_type= ccsm3
+   albicev    =   0.78000000000000003     
+   albicei    =   0.35999999999999999     
+   albsnowv   =   0.97999999999999998     
+   albsnowi   =   0.69999999999999996     
+   ahmax      =   0.29999999999999999     
+   R_ice      =    0.0000000000000000     
+   R_pnd      =    0.0000000000000000     
+   R_snw      =    1.5000000000000000     
+   dT_mlt     =    1.5000000000000000     
+   rsnw_mlt   =    1500.0000000000000     
+   kalg       =   0.59999999999999998     
+   kstrength  =            1
+   krdg_partic=            1
+   krdg_redist=            1
+   mu_rdg     =    3.0000000000000000     
+   atmbndy    = similarity
+   calc_strair=  T
+   formdrag   =  F
+   highfreq   =  F
+   natmiter   =            5
+   atmiter_conv =    0.0000000000000000     
+   tfrz_option= mushy
+   saltflux_option = constant
+   kitd       =            1
+   kcatbound  =            1
+   floeshape  =   0.66000000000000003     
+   wave_spec  =  F
+   wave_spec_type = none
+   nfreq      =           25
+   hs0        =    0.0000000000000000     
+   frzpnd     = hlid
+   dpscale    =    1.0000000000000000E-003
+   rfracmin   =   0.14999999999999999     
+   rfracmax   =    1.0000000000000000     
+   pndaspect  =   0.80000000000000004     
+   hs1        =    2.9999999999999999E-002
+   hp1        =    1.0000000000000000E-002
+   snwredist  = none
+   snw_aging_table = test
+   snwgrain   =  F
+   use_smliq_pnd =  F
+   rsnw_fall  =    100.00000000000000     
+   rsnw_tmax  =    1500.0000000000000     
+   rhosnew    =    100.00000000000000     
+   rhosmin    =    100.00000000000000     
+   rhosmax    =    450.00000000000000     
+   windmin    =    10.000000000000000     
+   drhosdwind =    27.300000000000001     
+   snwlvlfac  =   0.29999999999999999     
+   isnw_T     =            0
+   isnw_Tgrd  =            0
+   isnw_rhos  =            0
+   snw_ssp_table = test
+   bgc_flux_type = Jin2006
+   z_tracers  =  F
+   scale_bgc  =  F
+   solve_zbgc =  F
+   dEdd_algae =  F
+   modal_aero =  F
+   conserv_check =  F
+   skl_bgc    =  F
+   solve_zsal =  F
+   grid_o     =    6.0000000000000001E-003
+   l_sk       =    2.4000000000000000E-002
+   initbio_frac =   0.80000000000000004     
+   grid_oS    =    0.0000000000000000     
+   l_skS      =    2.8000000000000001E-002
+   phi_snow   =  -0.29999999999999999     
+   fr_resp    =    5.0000000000000003E-002
+   algal_vel  =    1.1100000000000000E-008
+   R_dFe2dust =    3.5000000000000003E-002
+   dustFe_sol =    5.0000000000000001E-003
+   T_max      =    0.0000000000000000     
+   fsal       =    1.0000000000000000     
+   op_dep_min =   0.10000000000000001     
+   fr_graze_s =   0.50000000000000000     
+   fr_graze_e =   0.50000000000000000     
+   fr_mort2min=   0.50000000000000000     
+   fr_dFe     =   0.29999999999999999     
+   k_nitrif   =    0.0000000000000000     
+   t_iron_conv=    3065.0000000000000     
+   max_loss   =   0.90000000000000002     
+   max_dfe_doc1 =   0.20000000000000001     
+   fr_resp_s  =   0.75000000000000000     
+   y_sk_DMS   =   0.50000000000000000     
+   t_sk_conv  =    3.0000000000000000     
+   t_sk_ox    =    10.000000000000000     
+   frazil_scav=   0.80000000000000004     
+   sw_redist  =  F
+   sw_frac    =   0.90000000000000002     
+   sw_dtemp   =    2.0000000000000000E-002
+ 
+  Initial forcing data year =         2015
+  Final   forcing data year =         2015
+ Reading /home/pjuotila/tiede/icepack-dirs/input/Icepack_data/forcing/ISPOL_2004/ISPOL_atm_forcing.txt                                                                                                                                                                   
+ Reading /home/pjuotila/tiede/icepack-dirs/input/Icepack_data/forcing/ISPOL_2004/pop_frc.gx1v3.051202_but_hblt_from_010815_ispol.txt                                                                                                                                     
+ Writing ./restart/iced.2006-01-01-00000
+ (write_restart_field)   0.0000000000000000       0.44542233251085056        2.1762938764796029     
+ (write_restart_field)   0.0000000000000000       0.50074153790894504        2.7487648289200846     
+ (write_restart_field)   0.0000000000000000       0.10168320017123615       0.62507280147138977     
+ (write_restart_field)  -6.9480353419265795       -1.9045826499242646       -79.602665062444061     
+ (write_restart_field)   0.0000000000000000        10.156631090235974        53.001502451508358     
+ (write_restart_field)   0.0000000000000000        5.3620634492914165        40.313561390859782     
+ (write_restart_field)   0.0000000000000000        3.4115488904433628        36.561971746168325     
+ (write_restart_field)   0.0000000000000000        2.7961969999707410        35.186560301011312     
+ (write_restart_field)   0.0000000000000000        3.0530646302545925        34.258537307527547     
+ (write_restart_field)   0.0000000000000000        3.1618037912021819        33.511414368066973     
+ (write_restart_field)   0.0000000000000000        3.1968784800338250        32.857609642905224     
+ (write_restart_field)  -302675079.68399298        0.0000000000000000       -2216462987.6374626     
+ (write_restart_field)  -304138310.53534323        0.0000000000000000       -2411163695.5571852     
+ (write_restart_field)  -301366728.58300042        0.0000000000000000       -2517090165.0038052     
+ (write_restart_field)  -298939367.56721282        0.0000000000000000       -2574092178.2284088     
+ (write_restart_field)  -297614369.54223996        0.0000000000000000       -2606867141.0536489     
+ (write_restart_field)  -296393468.11214346        0.0000000000000000       -2626402354.5292807     
+ (write_restart_field)  -294276899.71770942        0.0000000000000000       -2638795584.8219714     
+ (write_restart_field)  -112339072.95304951        0.0000000000000000       -1557858042.3721645     
+ (write_restart_field)   86.004615688334511        252.64995002746565        533.00202965987171     
+ (write_restart_field)   70.741986007690386        70.741986007690386        282.96794403076154     
+ (write_restart_field)   60.635988006591752        60.635988006591752        242.54395202636701     
+ (write_restart_field)   78.321484508514345        78.321484508514345        313.28593803405738     
+ (write_restart_field)   42.950491504669159        42.950491504669159        171.80196601867664     
+ (write_restart_field) -0.36591507166245552       0.38393154203933144       -4.8110616326134892E-002
+ (write_restart_field)  -1000.0000000000000        0.0000000000000000       -3000.0000000000000     
+ (write_restart_field)   0.0000000000000000        1.0000000000000000        13.999999999999924     
+ (write_restart_field)   0.0000000000000000        1.0000000000000000        13.999999999999851     
+ (write_restart_field)   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ (write_restart_field)   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ (write_restart_field)   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ (write_restart_field)   3.9079653362250602E-006   3.9079653362250602E-006   1.5631861344900241E-005
+ (write_restart_field)   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ (write_restart_field)   0.0000000000000000        0.0000000000000000        0.0000000000000000     
+ Restart read/written        17520   63072000.000000000        0.0000000000000000     
+ ICEPACK COMPLETED SUCCESSFULLY 
