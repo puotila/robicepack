@@ -6,8 +6,8 @@
     dt             = 3600.0
     npt            = 8760
     ndtd           = 1
-    ice_ic         = './restart/iceadj.2005-01-01-00000'
-    restart        = .true.
+    ice_ic         = 'default'
+    restart        = .false.
     restart_dir    = './restart/'
     restart_format = 'bin'
     dumpfreq       = 'y'
@@ -129,8 +129,8 @@
     fyear_init      = 2015
     ycycle          = 1
     data_dir        = '../../input/Icepack_data/forcing'
-    atm_data_file   = 'ISPOL_atm_forcing_shifted.txt'
-    ocn_data_file   = 'pop_frc.gx1v3.051202_but_hblt_from_010815_ispol_shifted.txt'
+    atm_data_file   = 'ISPOL_atm_forcing.txt'
+    ocn_data_file   = 'pop_frc.gx1v3.051202_but_hblt_from_010815_ispol.txt'
     bgc_data_file   = 'nutrients_daily_ISPOL_WOA_field3.txt'
     ice_data_file   = 'open_clos_lindsay.dat'
     atm_data_format = 'bin'
